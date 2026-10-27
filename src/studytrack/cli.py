@@ -26,6 +26,14 @@ def _register_session(path: Path) -> None:
 
     try:
         duration = int(raw_duration)
+    except ValueError:
+        print(
+            "Não foi possível registrar a sessão: "
+            "a duração deve ser um número inteiro de minutos."
+        )
+        return
+
+    try:
         session = StudySession(subject, session_date, duration, notes)
         sessions = load_sessions(path)
         sessions.append(session)
@@ -33,7 +41,6 @@ def _register_session(path: Path) -> None:
     except (ValueError, OSError) as exc:
         print(f"Não foi possível registrar a sessão: {exc}")
         return
-
     print("Sessão registrada com sucesso!")
 
 
