@@ -1,6 +1,6 @@
 # StudyTrack CLI
 
-[![CI - StudyTrack](https://github.com/SEU-USUARIO/studytrack-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU-USUARIO/studytrack-cli/actions/workflows/ci.yml)
+[![CI - StudyTrack](https://github.com/lucas-mendes1/studytrack-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/lucas-mendes1/studytrack-cli/actions/workflows/ci.yml)
 
 Aplicação de linha de comando para registrar sessões de estudo, consultar o histórico e acompanhar o tempo dedicado a cada disciplina. O projeto foi desenvolvido como prática de Python, testes automatizados, Gitflow e integração contínua com GitHub Actions.
 
@@ -26,7 +26,7 @@ Aplicação de linha de comando para registrar sessões de estudo, consultar o h
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/studytrack-cli.git
+git clone https://github.com/lucas-mendes1/studytrack-cli.git
 cd studytrack-cli
 ```
 
