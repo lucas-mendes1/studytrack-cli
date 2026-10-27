@@ -30,55 +30,64 @@ git clone https://github.com/lucas-mendes1/studytrack-cli.git
 cd studytrack-cli
 ```
 
-### 2. Criar e ativar um ambiente virtual
+### 2. Criar o ambiente virtual e instalar as dependências
 
-Windows (PowerShell):
+**Windows (PowerShell):**
 
 ```powershell
 py -m venv .venv
-.venv\Scripts\Activate.ps1
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 ```
 
-Linux/macOS:
+**Linux/macOS:**
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
-
-### 3. Instalar as dependências de desenvolvimento
-
-```bash
 python -m pip install -e ".[dev]"
 ```
 
-### 4. Iniciar o programa
+### 3. Executar o programa
+
+**Windows:**
+
+```powershell
+.\.venv\Scripts\python.exe -m studytrack
+```
+
+**Linux/macOS:**
 
 ```bash
 python -m studytrack
 ```
 
-Por padrão, os dados são guardados em `~/.studytrack/sessions.json`. Para usar outro caminho, defina a variável de ambiente `STUDYTRACK_DATA` antes de iniciar o programa.
+### 4. Executar os testes
 
-PowerShell:
+**Windows:**
 
 ```powershell
-$env:STUDYTRACK_DATA = "$PWD\sessions.json"
-python -m studytrack
+.\.venv\Scripts\python.exe -m pytest -v
 ```
 
-## Como executar os testes
+**Linux/macOS:**
 
 ```bash
 pytest -v
 ```
 
-## Como executar a análise estática
+### 5. Verificar a qualidade do código
+
+**Windows:**
+
+```powershell
+.\.venv\Scripts\ruff.exe check .
+```
+
+**Linux/macOS:**
 
 ```bash
 ruff check .
 ```
-
 ## Gitflow adotado
 
 - `main`: versão estável e pronta para entrega.
